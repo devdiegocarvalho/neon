@@ -262,7 +262,7 @@
     @include flex(row, flex-start, space-between);
   }
   .left-area {
-    max-width: 100%;
+    width: 100%;
     max-width: 27.7rem;
     .ilustra-mockup {
       position: relative;
@@ -450,6 +450,7 @@
       flex-direction: column-reverse;
       .right-area {
         max-width: 100%;
+        margin-bottom: 9.3rem;
         .main-text {
           margin-bottom: 5.7rem;
           h2 {
@@ -474,6 +475,25 @@
           max-width: 94.7%;
           .image {
             margin-right: -4rem;
+          }
+        }
+      }
+      .left-area {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 61rem;
+        margin: 0 auto;
+        .ilustra-mockup {
+          max-width: 25.5rem;
+          margin-bottom: 0;
+        }
+        .text {
+          max-width: 27rem;
+          .icon {
+            &::before {
+              display: none;
+            }
           }
         }
       }
