@@ -79,12 +79,14 @@
         left: 0;
         z-index: 2;
         max-width: 43.5rem;
+        animation: floating 6s infinite;
       }
       .card-back {
         bottom: 4.6rem;
         right: 8.6rem;
         z-index: 1;
         max-width: 35.2rem;
+        animation: floating 8s infinite;
       }
     }
   }
@@ -739,14 +741,17 @@
         &.circle {
           right: 0;
           bottom: 0;
+          z-index: -1;
         }
         &.mockup-01 {
           left: 0;
           bottom: 4.7rem;
+          z-index: 2;
         }
         &.mockup-02 {
           top: 0.3rem;
           left: 25.8rem;
+          z-index: 2;
         }
       }
     }
@@ -784,12 +789,6 @@
         img {
           &.circle {
             width: 100%;
-          }
-          &.mockup-01 {
-            z-index: 2;
-          }
-          &.mockup-02 {
-            z-index: 2;
           }
         }
       }
@@ -854,5 +853,17 @@
         }
       }
     }
+  }
+}
+
+@keyframes floating {
+  0% {
+    transform: translateY(0);
+  }
+  66% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0);
   }
 }
